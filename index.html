@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi niño lindo ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Georgia,serif;
+ background:linear-gradient(135deg,#fff0f5,#ffd6e7);
+ color:#9d174d;text-align:center;
+}
+header{padding:25px 12px 8px}
+h1{color:#c2185b;font-size:30px}
+h2{color:#c2185b}
+p{line-height:1.8}
+main{max-width:600px;margin:auto;padding:12px}
+.panel{
+ background:#fffafd;border:2px solid #ffb3cc;
+ border-radius:22px;padding:22px 16px;margin:15px 0;
+ box-shadow:0 5px 15px #d6336c18;
+}
+button{
+ background:#e63964;color:white;border:0;
+ border-radius:25px;padding:13px 18px;
+ font-size:16px;margin:7px;cursor:pointer;
+}
+button:hover{background:#c2185b}
+.secondary{background:#f8b8d0;color:#8d1748}
+.heart{font-size:30px;animation:beat 1s infinite}
+@keyframes beat{50%{transform:scale(1.15)}}
+.screen{display:none}
+.screen.active{display:block}
+.letter{text-align:left;white-space:pre-line;font-size:17px}
+.card{
+ background:#fff0f5;border:1px solid #ffc1d6;
+ border-radius:16px;padding:15px;margin:12px 0;
+}
+.couple{font-size:75px;margin:20px 0}
+input{padding:12px;border:1px solid pink;border-radius:12px}
+#languages{text-align:left}
+.lang{padding:10px;border-bottom:1px solid #ffd6e7}
+.small{font-size:13px;color:#a64d79}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="heart">💗 ❤️ 💗</div>
+ <h1>Para mi niño lindo</h1>
+ <p>Preparé algo muy especial para ti, Bladimir 🥹💌</p>
+</header>
+
+<main>
+
+<section id="welcome" class="screen active">
+ <div class="panel">
+  <div style="font-size:65px">🎀💌🎀</div>
+  <h2>Hola, mi amor ❤️</h2>
+  <p>Esta pequeña página está hecha especialmente para ti.</p>
+  <p>¿Listo para descubrir tus sorpresas?</p>
+  <button onclick="show('menu')">Toca aquí para entrar 💗</button>
+ </div>
+</section>
+
+<section id="menu" class="screen">
+ <div class="panel">
+  <h2>Un rinconcito para nosotros 💕</h2>
+  <p>Elige una sorpresa, mi niño lindo.</p>
+  <div class="card">
+   <h3>💌 Una carta para ti</h3>
+   <button onclick="show('letter')">Abrir mi carta</button>
+  </div>
+  <div class="card">
+   <h3>🌎 100 formas de decirte te amo</h3>
+   <button onclick="show('question')">Descubrir 💗</button>
+  </div>
+  <div class="card">
+   <h3>💑 Nuestra parejita</h3>
+   <button onclick="show('couple')">Ver sorpresa 🥹</button>
+  </div>
+ </div>
+</section>
+
+<section id="letter" class="screen">
+ <div class="panel">
+  <div style="font-size:45px">💌❤️</div>
+  <h2>Una carta para mi amor</h2>
+  <div class="letter">Te amo con toda mi alma, me encantas.
+
+Desde que empecé a hablar contigo, ya no me siento sola en las noches, así como me sentía antes. Mi vida ha cambiado desde que estoy contigo. Siempre estoy feliz, y eso no era normal en mí, ya que siempre me ponía a sobrepensar las cosas y no tenía ánimos.
+
+Cuando me dices “te amo” o cuando me dices que “eres lo que tanto quise”, ¡estallo de felicidad! 🥹💗
+
+Nunca me habían tratado como tú me tratas. Siempre se alejaban de mí cuando me ponía indiferente, pero tú… tú te quedas conmigo, hablando sin importar lo seca que esté, y eso me encanta.
+
+Te amo, y nunca me cansaré de decírtelo. ❤️‍🩹💌
+
+Con todo mi amor, para ti. 💗</div>
+  <p class="heart">❤️</p>
+  <button onclick="show('menu')">Tengo otra sorpresa para ti 💗</button>
+ </div>
+</section>
+
+<section id="question" class="screen">
+ <div class="panel">
+  <div style="font-size:50px">🌎💗</div>
+  <h2>Una preguntita para ti… 🥹</h2>
+  <p><b>¿Alguna vez te han dicho «te amo» en 100 idiomas?</b></p>
+  <button onclick="show('languages')">Sí, mi niña 💗</button>
+  <button class="secondary" onclick="show('languages')">No, mi amor 🥹</button>
+  <p class="small">Las dos respuestas esconden la misma sorpresa ❤️</p>
+  <button class="secondary" onclick="show('menu')">Volver al menú</button>
+ </div>
+</section>
+
+<section id="languages" class="screen">
+ <div class="panel">
+  <h2>100 formas de decirte te amo 🌎❤️</h2>
+  <p>En tantos idiomas, pero siempre para ti, mi amor. 💌</p>
+  <div id="list"></div>
+  <p><b>En 100 idiomas te lo puedo decir, pero mi corazón sabe una cosa: te ama a ti. 🥹❤️</b></p>
+  <button onclick="show('menu')">Tengo otra sorpresa para ti 💗</button>
+ </div>
+</section>
+
+<section id="couple" class="screen">
+ <div class="panel">
+  <h2>Nuestra parejita enamorada 💑</h2>
+  <div class="couple">👩🏻‍❤️‍👨🏻</div>
+  <div class="heart">💗 💕 ❤️</div>
+  <p>Puede haber distancia entre nosotros, pero siempre hay un lugar para ti en mi corazón. 🥹</p>
+  <button onclick="secret()">Toca aquí para un mensaje secreto 💌</button>
+  <p id="secretMessage" style="display:none;font-size:18px">
+   Mi niño lindo, si pudiera pedir un deseo, sería seguir creando recuerdos bonitos contigo. Te amo muchísimo. ❤️
+  </p>
+  <button class="secondary" onclick="show('menu')">Volver al menú</button>
+ </div>
+</section>
+
+</main>
+
+<footer class="small" style="padding:20px">
+ Hecho con amor para Bladimir ❤️
+</footer>
+
+<script>
+function show(id){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ window.scrollTo(0,0);
+}
+function secret(){
+ document.getElementById('secretMessage').style.display='block';
+}
+
+const languages = [
+["Español","Te amo"],["Inglés","I love you"],
+["Francés","Je t’aime"],["Italiano","Ti amo"],
+["Portugués","Eu te amo"],["Alemán","Ich liebe dich"],
+["Neerlandés","Ik hou van jou"],["Sueco","Jag älskar dig"],
+["Noruego","Jeg elsker deg"],["Danés","Jeg elsker dig"],
+["Finés","Rakastan sinua"],["Islandés","Ég elska þig"],
+["Polaco","Kocham cię"],["Checo","Miluji tě"],
+["Eslovaco","Ľúbim ťa"],["Húngaro","Szeretlek"],
+["Rumano","Te iubesc"],["Búlgaro","Обичам те"],
+["Griego","Σ’ αγαπώ"],["Ruso","Я тебя люблю"],
+["Ucraniano","Я тебе кохаю"],["Serbio","Волим те"],
+["Croata","Volim te"],["Bosnio","Volim te"],
+["Esloveno","Ljubim te"],["Macedonio","Те сакам"],
+["Albanés","Të dua"],["Turco","Seni seviyorum"],
+["Azerí","Mən səni sevirəm"],["Georgiano","მიყვარხარ"],
+["Armenio","Ես քեզ սիրում եմ"],["Hebreo","אני אוהב אותך"],
+["Árabe","أحبك"],["Persa","دوستت دارم"],
+["Urdu","میں تم سے محبت کرتا ہوں"],["Hindi","मैं तुमसे प्यार करता हूँ"],
+["Bengalí","আমি তোমাকে ভালোবাসি"],["Punyabí","ਮੈਂ ਤੈਨੂੰ ਪਿਆਰ ਕਰਦਾ ਹਾਂ"],
+["Nepalí","म तिमीलाई माया गर्छु"],["Cingalés","මම ඔයාට ආදරෙයි"],
+["Tailandés","ฉันรักคุณ"],["Lao","ຂ້ອຍຮັກເຈົ້າ"],
+["Jemer","ខ្ញុំស្រឡាញ់អ្នក"],["Vietnamita","Anh yêu em / Em yêu anh"],
+["Chino mandarín","我爱你"],["Japonés","愛してる"],
+["Coreano","사랑해"],["Mongol","Би чамд хайртай"],
+["Indonesio","Aku cinta kamu"],["Malayo","Saya cinta padamu"],
+["Filipino","Mahal kita"],["Tamil","நான் உன்னை காதலிக்கிறேன்"],
+["Telugu","నేను నిన్ను ప్రేమిస్తున్నాను"],["Canarés","ನಾನು ನಿನ್ನನ್ನು ಪ್ರೀತಿಸುತ್ತೇನೆ"],
+["Malayalam","ഞാൻ നിന്നെ സ്നേഹിക്കുന്നു"],["Maratí","माझं तुझ्यावर प्रेम आहे"],
+["Guyaratí","હું તને પ્રેમ કરું છું"],["Odia","ମୁଁ ତୁମକୁ ଭଲ ପାଏ"],
+["Asamés","মই তোমাক ভাল পাওঁ"],["Irlandés","Tá grá agam duit"],
+["Galés","Rwy’n dy garu di"],["Gaélico escocés","Tha gaol agam ort"],
+["Maltés","Inħobbok"],["Luxemburgués","Ech hunn dech gär"],
+["Estonio","Ma armastan sind"],["Letón","Es tevi mīlu"],
+["Lituano","Aš tave myliu"],["Bielorruso","Я цябе кахаю"],
+["Kazajo","Мен сені жақсы көремін"],["Uzbeko","Men seni sevaman"],
+["Kirguís","Мен сени сүйөм"],["Tayiko","Ман туро дӯст медорам"],
+["Turcomano","Men seni söýýärin"],["Pastún","زه له تا سره مینه لرم"],
+["Amhárico","እወድሃለሁ"],["Somalí","Waan ku jeclahay"],
+["Suajili","Nakupenda"],["Afrikáans","Ek is lief vir jou"],
+["Xhosa","Ndiyakuthanda"],["Zulú","Ngiyakuthanda"],
+["Yoruba","Mo nífẹ̀ẹ́ rẹ"],["Igbo","A hụrụ m gị n’anya"],
+["Hausa","Ina son ka"],["Malgache","Tiako ianao"],
+["Ruandés","Ndagukunda"],["Kirundi","Ndagukunda"],
+["Chichewa","Ndimakukonda"],["Wólof","Dama la bëgg"],
+["Bambara","M’bi fè"],["Guaraní","Rohayhu"],
+["Quechua","Kuyayki"],["Náhuatl","Nimitztlazohtla"],
+["Cree","Kisâkihitin"],["Inuktitut","ᓇᒡᓕᒋᕙᒋᑦ"],
+["Maorí","Aroha ahau ki a koe"],["Samoano","Ou te alofa ia te oe"],
+["Tongano","ʻOku ou ʻofa atu"],["Criollo haitiano","Mwen renmen ou"],
+["Tahitiano","Ua here vau ia oe"]
+];
+
+document.getElementById('list').innerHTML = languages.map((item,i)=>
+ '<div class="lang"><b>'+(i+1)+'. '+item[0]+':</b> '+item[1]+'</div>'
+).join('');
+</script>
+</body>
+  </html>
+  
